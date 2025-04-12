@@ -24,6 +24,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding: 3rem;
 }
 
 h1.section-heading {
@@ -41,8 +42,10 @@ h1.section-heading {
   position: absolute;
   text-shadow: 2px 2px 2px black;
   transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
 }
 
 .section-1-icons i.change {
   transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s 0.3s;
 }
