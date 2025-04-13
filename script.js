@@ -16,7 +16,7 @@ setInterval(() => {
 
 async function fetchCardData() {
   try {
-    const res = await fetch("./popular-meals.json");
+    const res = await fetch("./data/popular-meals.json");
     if (!res.ok) throw new Error("Could not fetch data.");
     const data = await res.json();
     renderCards(data);
