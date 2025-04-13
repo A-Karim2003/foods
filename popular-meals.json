@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Fish",
+    "image": "./images/card-img-1.png"
+  },
+  {
+    "title": "Cake",
+    "image": "./images/card-img-2.png"
+  },
+  {
+    "title": "Lobster",
+    "image": "./images/card-img-3.png"
+  }
+]
