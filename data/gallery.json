@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Pancakes",
+    "description": "Delicious fluffy pancakes topped with fresh berries and maple syrup. Perfect for breakfast or brunch.",
+    "image": "./images/card-img-1.jpg"
+  },
+  {
+    "title": "Chocolate Cupcakes",
+    "description": "Rich chocolate cupcakes topped with vanilla frosting and sprinkled with candy bits. Great for dessert or celebrations.",
+    "image": "./images/card-img-2.jpg"
+  },
+  {
+    "title": "Breakfast Toast",
+    "description": "Artisanal toast with poached eggs and fresh fruit. A healthy and satisfying breakfast option.",
+    "image": "./images/card-img-3.jpg"
+  },
+  {
+    "title": "Cheeseburger",
+    "description": "Classic beef burger with melted cheese, fresh vegetables, and special sauce on a sesame seed bun.",
+    "image": "./images/card-img-4.jpg"
+  },
+  {
+    "title": "Grilled Salmon",
+    "description": "Perfectly grilled salmon steak with fresh herbs. High in protein and omega-3 fatty acids.",
+    "image": "./images/card-img-5.jpg"
+  },
+  {
+    "title": "Fresh Vegetables",
+    "description": "Assortment of fresh, organic vegetables including broccoli, tomatoes, and cucumber. Perfect for healthy meals.",
+    "image": "./images/card-img-6.jpg"
+  }
+]

@@ -19,7 +19,7 @@ html {
 section {
   width: 100%;
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 }
 
 h1.section-heading {
@@ -61,7 +61,6 @@ h1.section-heading {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
-  border: solid rebeccapurple 4px;
 }
 
 .card-container {
@@ -144,4 +143,95 @@ h1.section-heading {
   font-weight: 800;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+/* Section 3 */
+
+.section-3 {
+  background-color: #333333;
+}
+
+.Gallery-container {
+  margin-top: 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.gallery-link {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-link::before,
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+.gallery-link::before {
+  height: 80%;
+  width: 0.5rem;
+  right: 25%;
+  top: 3rem;
+}
+
+.gallery-link::after {
+  height: 0.5rem;
+  width: 90%;
+  top: 25%;
+  left: 3rem;
+}
+
+.gallery .food-img {
+  width: 100%;
+  object-fit: cover;
+
+  /* prettier-ignore */
+  box-shadow:
+    0.3rem 0.3rem 0.1rem red,
+    0.5rem 0.5rem 0.1rem lightcyan,
+    0.7rem 0.7rem 0.1rem rebeccapurple,
+    0.9rem 0.9rem 0.1rem steelblue;
+}
+
+.gallery .food-name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery .food-description {
+  position: absolute;
+  top: 9rem;
+  left: 3rem;
+  width: 70%;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* By default the food descriptions should be hidden */
+.gallery .food-name,
+.gallery .food-description,
+.gallery-link::before,
+.gallery-link::after {
+  visibility: hidden;
+}
+
+/* By default the food descriptions should be hidden */
+.gallery:hover .gallery .food-name,
+.gallery .food-description,
+.gallery-link::before,
+.gallery-link::after {
+  visibility: visible;
 }
