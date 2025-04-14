@@ -1,7 +1,10 @@
 "use strict";
+const POPULAR_MEALS_PATH = "./data/popular-meals.json";
+const GALLERY_PATH = "./data/gallery.json";
 
 const icons = document.querySelectorAll(".section-1-icons i");
-const cardContainer = document.querySelector(".card-container");
+const cardsContainer = document.querySelector(".card-container");
+const GalleryContainer = document.querySelector(".Gallery-container");
 
 //? add functionality for automatic icon change
 let i = 0;
@@ -14,17 +17,19 @@ setInterval(() => {
 /*=================================================*/
 //* use json to extract card data and append to DOM
 
-async function fetchCardData() {
+async function fetchCardData(jsonPath, renderFunction, container) {
   try {
-    const res = await fetch("./data/popular-meals.json");
+    const res = await fetch(jsonPath);
     if (!res.ok) throw new Error("Could not fetch data.");
     const data = await res.json();
-    renderCards(data);
+    renderFunction(data, container);
   } catch (error) {}
 }
-fetchCardData();
+//* Renders popular meals
+fetchCardData(POPULAR_MEALS_PATH, renderCards, cardsContainer);
+fetchCardData(GALLERY_PATH, renderGalleryCards, GalleryContainer);
 
-function renderCards(data) {
+function renderCards(data, container) {
   data.forEach((card) => {
     const cardHTML = `
       <div class="card">
@@ -35,6 +40,24 @@ function renderCards(data) {
           <button>Order Now</button>
       </div>
     `;
-    cardContainer.insertAdjacentHTML("beforeend", cardHTML);
+    container.insertAdjacentHTML("beforeend", cardHTML);
+  });
+}
+
+function renderGalleryCards(data, container) {
+  data.forEach((meal) => {
+    const galleryHTML = `
+      <div class="gallery">
+        <a href="#" class="gallery-link">
+            <img src="${meal.image}" class="food-img">
+            <h3 class="food-name">${meal.title}</h3>
+            <p class="food-description">
+            ${meal.description}
+            </p>
+        </a>
+      </div>
+    `;
+
+    container.insertAdjacentHTML("beforeend", galleryHTML);
   });
 }
