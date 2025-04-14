@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --section-title-size: 10rem;
+  --section-icons-size: 35rem;
+  --nav-icons-size: 6rem;
+  --nav-text-size: 2rem;
+  --menu-height-size: 6rem;
+  --menu-width-size: 4rem;
+}
+
+@media (max-width: 918px) {
+  :root {
+    --section-title-size: 8rem;
+    --section-icons-size: 28rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --menu-height-size: 4rem;
+    --menu-width-size: 2.68rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --section-title-size: 5rem;
+    --section-icons-size: 17.5rem;
+    --nav-icons-size: calc(6rem - 40%);
+    --nav-text-size: calc(2rem - 40%);
+  }
+}
+
 /* Default styles */
 * {
   box-sizing: border-box;
@@ -28,7 +60,7 @@ header {
   height: 0rem;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 20;
   display: flex;
   transition: 0.4s;
 }
@@ -57,25 +89,25 @@ header {
 }
 
 .nav-link i {
-  font-size: 6rem;
+  font-size: var(--nav-icons-size);
 }
 
 .nav-link span {
-  font-size: 2rem;
+  font-size: var(--nav-text-size);
   font-weight: 900;
   letter-spacing: 3px;
 }
 
 .menu {
-  width: 4rem;
-  height: 6rem;
+  width: var(--menu-width-size);
+  height: var(--menu-height-size);
   background-color: black;
   position: fixed;
   top: 1rem;
   left: 5rem;
+  transform: translateX(-50%);
   border-radius: 30rem 30rem 15rem 15rem;
   cursor: pointer;
-  z-index: 10;
   transition: top 0.4s 0.4s;
 }
 
@@ -86,7 +118,7 @@ header {
   background-color: black;
   position: absolute;
   top: -15rem;
-  left: 2rem;
+  left: calc((var(--menu-width-size) / 2));
 }
 
 /* Add functionality for retractable elements */
@@ -130,7 +162,7 @@ header.active .nav-bar {
 }
 /*-------------------------------------------------*/
 h1.section-heading {
-  font-size: 10rem;
+  font-size: var(--section-title-size);
   font-weight: 900;
   color: white;
   letter-spacing: 0.5rem;
@@ -148,7 +180,7 @@ h1.section-heading {
 }
 
 .section-1-icons i {
-  font-size: 35rem;
+  font-size: var(--section-icons-size);
   color: #a79a2d;
   position: absolute;
   text-shadow: 2px 2px 2px black;
