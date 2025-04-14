@@ -71,3 +71,34 @@ function renderGalleryCards(data, container) {
     container.insertAdjacentHTML("beforeend", galleryHTML);
   });
 }
+
+//? Implement intersection observer
+
+const options = {
+  root: null,
+  threshold: 0,
+  // rootMargin: 0,
+};
+
+const observerCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      targets.forEach((target) => {
+        target.classList.add("active");
+      });
+    } else {
+      console.log("Not intersecting");
+
+      targets.forEach((target) => {
+        target.classList.remove("active");
+      });
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, options);
+
+const section1 = document.querySelector(".section-1"); // element being observed
+observer.observe(section1);
+
+//===========================================================================================
