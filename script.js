@@ -5,6 +5,8 @@ const GALLERY_PATH = "./data/gallery.json";
 const icons = document.querySelectorAll(".section-1-icons i");
 const cardsContainer = document.querySelector(".card-container");
 const GalleryContainer = document.querySelector(".Gallery-container");
+const menu = document.querySelector(".menu");
+const targets = document.querySelectorAll(".target");
 
 //? add functionality for automatic icon change
 let i = 0;
@@ -13,6 +15,14 @@ setInterval(() => {
   i = (i + 1) % icons.length;
   icons[i].classList.add("change");
 }, 3000);
+
+//? Add functionality of retracting header
+
+menu.addEventListener("click", () => {
+  targets.forEach((target) => {
+    target.classList.toggle("active");
+  });
+});
 
 /*=================================================*/
 //* use json to extract card data and append to DOM
