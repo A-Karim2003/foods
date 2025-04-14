@@ -176,13 +176,14 @@ h1.section-heading {
   z-index: 1;
 }
 
+/* Verticle line */
 .gallery-link::before {
   height: 0;
   width: 0.3rem;
-  right: 25%;
+  right: 20%;
   top: 3rem;
 }
-
+/* Horizontal line */
 .gallery-link::after {
   height: 0.3rem;
   width: 0;
@@ -276,4 +277,54 @@ h1.section-heading {
   opacity: 1;
   visibility: visible;
   transition: opacity 1s 1s;
+}
+
+footer {
+  background-color: #222222;
+  padding: 2rem;
+}
+
+.sign-up-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sign-up-container h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #a79a2d;
+}
+.sign-up-container small {
+  font-size: 1.2rem;
+  color: #7c7c7c;
+}
+
+form {
+  position: relative;
+  width: 30%;
+  max-width: 600px;
+}
+
+.sign-up-form {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.sign-up-form[placeholder] {
+  color: #a79a2d;
+}
+
+footer button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5rem;
+  background-color: #333333;
+  color: #a79a2d;
+  border: none;
+  cursor: pointer;
 }

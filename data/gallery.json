@@ -5,27 +5,27 @@
     "image": "./images/gallery-img-1.jpg"
   },
   {
-    "title": "Chocolate Cupcakes",
+    "title": "Cupcakes",
     "description": "Rich chocolate cupcakes topped with vanilla frosting and sprinkled with candy bits. Great for dessert or celebrations.",
     "image": "./images/gallery-img-2.jpg"
   },
   {
-    "title": "Breakfast Toast",
+    "title": "Hummus",
     "description": "Artisanal toast with poached eggs and fresh fruit. A healthy and satisfying breakfast option.",
     "image": "./images/gallery-img-3.jpg"
   },
   {
-    "title": "Cheeseburger",
+    "title": "Burger",
     "description": "Classic beef burger with melted cheese, fresh vegetables, and special sauce on a sesame seed bun.",
     "image": "./images/gallery-img-4.jpg"
   },
   {
-    "title": "Grilled Salmon",
+    "title": "Salmon",
     "description": "Perfectly grilled salmon steak with fresh herbs. High in protein and omega-3 fatty acids.",
     "image": "./images/gallery-img-5.jpg"
   },
   {
-    "title": "Fresh Vegetables",
+    "title": "Vegetables",
     "description": "Assortment of fresh, organic vegetables including broccoli, tomatoes, and cucumber. Perfect for healthy meals.",
     "image": "./images/gallery-img-6.jpg"
   }
